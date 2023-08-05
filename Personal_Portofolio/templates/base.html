@@ -1,0 +1,122 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio | Personal_Page</title>
+  <link rel="icon" type="image/x-icon" href="{%static 'images/logoicon.ico' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'css/input.css' %}">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+</head>
+
+<body>
+  <header id="header" class="fixed-top bg-gray-100 h-16 bg-white">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <h1 class="logo me-auto me-lg-0 pl-4 text-4xl text-indigo-700 font-bold"><a href="#">Hassen</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link active" href="">Home</a></li>
+          <li><a class="nav-link" href="#about-me">About</a></li>
+          <li><a class="nav-link" href="#projects">Portfolio</a></li>
+          <li><a class="nav-link" href="#experience">Experience</a></li>
+          <li><a class="nav-link" href="#contact-me">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+    </div>
+  </header>
+
+
+  {%block content %}
+
+  {%endblock content%}
+
+  <section class="footer bg-indigo-700 text-white py-10" id="footer">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="col-md-6 p-4">
+          <h3 class="text-center text-white font-bold text-xl mb-4">Important Links</h3>
+          <ul class="list-none text-center">
+            <li class="mb-2">
+              <a href="/" class="block hover:text-gray-300">Home</a>
+            </li>
+            <li class="mb-2">
+              <a href="#about-me" class="block hover:text-gray-300">About</a>
+            </li>
+            <li class="mb-2">
+              <a href="#projects" class="block hover:text-gray-300">Projects</a>
+            </li>
+            <li>
+              <a href="#experience" class="block hover:text-gray-300">Experience</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 p-4">
+          <h3 class="text-center text-white font-bold text-xl mb-4">Social Links</h3>
+          <ul class="list-none text-center">
+            <li class="mb-2">
+              <a href="https://github.com/HassenShirdon" target="_blank" class="block hover:text-gray-300">
+                <i class="bi bi-github pr-2"></i> GitHub
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.linkedin.com/in/hassenshirdon/" target="_blank" class="block hover:text-gray-300">
+                <i class="bi bi-linkedin pr-2"></i> LinkedIn
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://twitter.com/hassentshirdon" target="_blank" class="block hover:text-gray-300">
+                <i class="bi bi-twitter pr-2"></i> Twitter
+              </a>
+            </li>
+            <li class="mb-2">
+              <a href="https://www.instagram.com/hassen_hared/" target="_blank" class="block hover:text-gray-300">
+                <i class="bi bi-instagram pr-2"></i> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="#" class="block hover:text-gray-300">
+                <i class="bi bi-facebook pr-2"></i> Facebook
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="text-center text-white font-bold mt-6">&copy; 2023 by Hassen Tahir</p>
+  </section>
+
+
+
+
+
+
+  <script src="{%static 'js/script.js'%}"></script>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
+    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

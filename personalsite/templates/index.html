@@ -1,0 +1,305 @@
+{% extends "base.html" %}
+{%load static%}
+{%block content %}
+
+<section class="hero container-fluid">
+  <div class="hero-content">
+    <h1 class="pb-8 ">Hi, I'm Hassen Tahir &nbsp;|&nbsp;<span class="text-indigo-700">I'm Fullstack Developer</span>
+    </h1>
+    <p class="pb-8 text-black">Building the web from front to back, I bring full-stack expertise to craft robust and
+      scalable
+      solutions.</p>
+    <a href="#about-me" class="btn hero-btn rounded-md">Learn more</a>
+    <a href="#projects" class="btn hero-btn rounded-md">Check Projects</a>
+  </div>
+</section>
+
+<section class="about-me py-10 " data-aos="fade-up" data-aos-duration="1000" id="about-me">
+  <div class="container mx-auto">
+    <h1 class="text-indigo-700 w-max border-b-2 border-indigo-700 pb-2 mx-auto text-2xl uppercase">About Me</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+      <div class="col-md-12 md:col-md-6">
+        <h3 class="about-heading text-indigo-700 text-xl font-semibold text-center mb-4">Background Info</h3>
+        <p class="intro text-gray-700 leading-relaxed">
+          Hi, <span class="text-indigo-700 font-semibold"> I am Hassen T.</span> highly skilled and motivated Full-Stack
+          Developer with a strong background in web development, encompassing both front-end and back-end technologies.
+          Adept at crafting seamless user interfaces and building robust server-side applications, utilizing clean code,
+          efficient algorithms, and best practices in software engineering. Proficient in a wide range of programming
+          languages, including HTML, CSS, JavaScript, React, Python, and Django, delivering scalable and top-quality
+          solutions. </p>
+        <p class="intro text-gray-700 leading-relaxed mt-4">
+          Experienced in leveraging additional tools and frameworks, such as jQuery, Tailwind CSS, and Bootstrap, to
+          enhance development efficiency. Possessing expert knowledge in database design, RESTful APIs, and Git version
+          control. Adaptable and proficient in agile methodologies, collaborating effectively with cross-functional
+          teams to achieve project objectives. Strong communication and interpersonal skills contribute to successful
+          project execution. Eager to take on new challenges and contribute to impactful projects as a dedicated
+          Full-Stack Developer.
+        </p>
+        <div class="text-center mt-6">
+          <a href="{% static 'Resume.pdf' %}" download
+            class="btn hero-btn rounded-md bg-indigo-700 text-white mt-4 hover:bg-gray-900 hover:text-white">
+            <i class="fa-solid fa-download"></i> Download CV
+          </a>
+        </div>
+      </div>
+      <div class="col-md-12 md:col-md-6 animate__animated animate__fadeIn animate__delay-2s">
+        <div class="text-center mt-12">
+          <h3 class="about-heading text-indigo-700 text-xl font-semibold mb-4">Skills</h3>
+          <ul class="skills grid grid-cols-2 md:grid-cols-3 gap-4">
+            <li class="skill-item flex items-center">
+              <i class="fab fa-html5"></i>
+              <span class="ml-2">HTML</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-css3-alt"></i>
+              <span class="ml-2">CSS</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-js"></i>
+              <span class="ml-2">JavaScript</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-jquery"></i>
+              <span class="ml-2">jQuery</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-tailwind"></i>
+              <span class="ml-2">Tailwind CSS</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-bootstrap"></i>
+              <span class="ml-2">Bootstrap</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-react"></i>
+              <span class="ml-2">React</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-python"></i>
+              <span class="ml-2">Python</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-python"></i>
+              <span class="ml-2">Django</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fas fa-database"></i>
+              <span class="ml-2">Database Design</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fas fa-code"></i>
+              <span class="ml-2">RESTful APIs</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fab fa-git"></i>
+              <span class="ml-2">Version Control (Git)</span>
+            </li>
+            <li class="skill-item flex items-center">
+              <i class="fas fa-project-diagram"></i>
+              <span class="ml-2">Agile Methodologies</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-10 projects bg-indigo-700" data-aos="fade-right" data-aos-duration="2000" id="projects">
+  <div class="container mx-auto">
+    <h1 class="text-white w-max border-b-2 border-white pb-2 mx-auto text-2xl uppercase">My Portfolio</h1>
+    <div class="flex flex-wrap items-center -mx-4">
+      {% for project in projects %}
+      <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-4 pt-4">
+        <div
+          class="project-card rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+          <img class="w-full rounded-4 img-fluid" src="{{ project.picture.url }}" alt="Project Image">
+          <div class="p-4">
+            <h2 class="text-2xl mb-2 text-center text-white font-bold">{{ project.title }}</h2>
+            <p class="text-white mb-4">{{ project.description }}</p>
+
+            <div class="mt-4">
+              <h4 class="font-bold mb-2 text-white">Technologies Used:</h4>
+              <ul class="list-disc list-inside text-gray-700 d-grid text-center" style="list-style: none;">
+                <li class="text-white rounded-md mb-4 list-disc text-center" style="list-style: none;">
+                  {{ project.technologies_used }}
+                </li>
+              </ul>
+            </div>
+            <div class="flex justify-center space-x-2">
+              <div class="w-full md:w-1/2 px-5 mb-2">
+                <a href="{{ project.githublink }}"
+                  class="inline-block bg-gray-400 hover:bg-red-900 text-white px-4 py-2 rounded-md"><i
+                    class="bi bi-github"></i></a>
+              </div>
+              <div class="w-full md:w-1/2 px-3 mb-2">
+                <a href="{{ project.livelink }}"
+                  class="inline-block bg-gray-400 hover:bg-red-900 text-white px-4 py-2 rounded-md"><i
+                    class="bi bi-browser-chrome"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="experience" data-aos="fade-down" data-aos-duration="5000" class="resume bg-light ">
+  <div class="container mx-auto py-16">
+    <div class="text-center">
+      <h2 class="w-max border-b-2 border-indigo-700 pb-2 mx-auto text-2xl uppercase text-indigo-700">Resume</h2>
+      <p class="text-indigo-700 font-bold p-4">Check out my resume</p>
+    </div>
+
+    <div class="flex flex-wrap mt-12">
+      <div class="w-full lg:w-1/2 px-4">
+        <div class="border-l-4 border-indigo-700 pl-5 relative">
+          <div class="circle"></div>
+          <h3 class="text-2xl font-bold mb-4 text-indigo-700">Summary</h3>
+          <div class="bg-white rounded-lg p-4 mt-4">
+            <h4 class="text-xl font-bold">Hassen Tahir Shirdon</h4>
+            <p class="mt-2 text-gray-700"><em>Innovative and deadline-driven with 7+ years of experience
+                teaching and developing user-centered websites. Advanced proficiency in HTML, CSS, JavaScript, Python,
+                JQuery, Reactjs and
+                Django. Strong collaborator with excellent communication skills.</em></p>
+            <ul class="mt-4">
+              <li class="text-gray-700">Munchen, Germany</li>
+              <li class="text-gray-700">hassen.hared@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-l-4  border-indigo-700 pl-5 relative">
+          <div class="circle"></div>
+          <h3 class="text-2xl font-bold mt-8 text-indigo-700"><i class="fa-solid fa-graduation-cap"></i> Education</h3>
+          <div class="bg-white rounded-lg p-6 mt-4 education-item">
+            <h4 class="text-xl font-bold ">Bachelor of Computer Science</h4>
+            <h5 class="mt-2 text-gray-700">2009 - 2012</h5>
+            <p class="mt-2 text-gray-700"><em>Jigjiga University, Ethiopia</em></p>
+          </div>
+          <div class="bg-white rounded-lg p-6 mt-4 education-item">
+            <h4 class="text-xl font-bold">Master of Computational and Cognitive Neuroscience</h4>
+            <h5 class="mt-2 text-gray-700">2020 - 2022</h5>
+            <p class="mt-2 text-gray-700"><em>Eötvös Loránd University, Hungary</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 px-4">
+        <div class="border-l-4  border-indigo-700 pl-5 relative">
+          <div class="circle"></div>
+          <h3 class="text-2xl font-bold mb-4  border-indigo-700 text-indigo-700"> <i class="fa fa-briefcase"></i>
+            Experience</h3>
+          <div class="bg-white rounded-lg p-6 mt-4">
+            <h4 class="text-xl font-bold">Lecturer</h4>
+            <h5 class="mt-2 text-gray-700">2012 - 2020</h5>
+            <p class="mt-2 text-gray-700"><em>Jigjiga University, Jigjiga, Ethiopia</em></p>
+            <ul class="mt-4 list-disc list-inside text-red-900">
+              <li class="text-gray-700"> Deliver lectures and conduct tutorials for undergraduate students in Computer
+                Science.</li>
+              <li class="text-gray-700"> Provide guidance and support to students, including advising on academic
+                matters and assisting with
+                coursework.</li>
+              <li class="text-gray-700">Contribute to the development and improvement of course materials and
+                curriculum.</li>
+              <li class="text-gray-700">Assist in administrative tasks such as grading assignments, proctoring exams,
+                and maintaining records of
+                student performance.</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 mt-4">
+            <h4 class="text-xl font-bold">Head of Department</h4>
+            <h5 class="mt-2 text-gray-700">2016 - 2020</h5>
+            <p class="mt-2 text-gray-700"><em>Jigjiga University, Jigjiga, Ethiopia</em></p>
+            <ul class="mt-4 list-disc list-inside text-red-900">
+              <li class="text-gray-700"> Provide academic leadership and direction within the Computer Science
+                department.</li>
+              <li class="text-gray-700">Manage faculty members, including recruitment, promotion, and performance
+                evaluation.</li>
+              <li class="text-gray-700">Develop and evaluate Computer Science programs to ensure relevance and
+                quality.
+              </li>
+              <li class="text-gray-700">Manage the department's budget and resources effectively.</li>
+              <li class="text-gray-700">Support and engage with students through advising, events, and industry
+                collaborations.</li>
+            </ul>
+          </div>
+          <div class="bg-white rounded-lg p-6 mt-4">
+            <div class="circle"></div>
+            <h4 class="text-xl font-bold">Video Audio Editor</h4>
+            <h5 class="mt-2 text-gray-700">2018 - 2020</h5>
+            <p class="mt-2 text-gray-700"><em>Somali Regional State TV (SRTV), Jigjiga, Ethiopia</em></p>
+            <ul class="mt-4 list-disc list-inside text-red-900">
+              <li class="text-gray-700"> Edit raw video footage and audio recordings to create high-quality and engaging
+                content for various programs and productions.</li>
+              <li class="text-gray-700"> Ensure smooth transitions, proper sequencing, and synchronization of video and
+                audio elements.</li>
+              <li class="text-gray-700">Enhance video and audio quality through color correction, audio mixing, and
+                applying visual effects or graphics when necessary.</li>
+              <li class="text-gray-700">Collaborate with producers, directors, and other team members to understand
+                project requirements and deliver the desired creative vision.</li>
+              <li class="text-gray-700">Maintain an organized file management system for video and audio assets,
+                ensuring efficient retrieval and archival of content.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact-me" class="contact">
+  <div class="container">
+    <h1 class="text-red-900 w-max border-b-2 border-indigo-700 pb-2 mx-auto">Contact Me</h1>
+    <p class="text-indigo-700 mt-2">To contact us, please send us a message, and we'll get back to you as soon as
+      possible.
+    </p>
+    <div class="row">
+      <div class="col-md-5 d-flex align-items-center ">
+        <div class="contact-info ">
+          <h2 class="text-center text-indigo-700 mb-4 font-bold ">Contact Information</h2>
+          <ul class="contact-details">
+            <li class="mb-3">
+              <i class="fa fa-envelope text-indigo-700"></i>
+              <a class="text-indigo-700" href="mailto:example@example.com ">Hassen.hared@gmail.com</a>
+            </li>
+            <li class="mb-3 text-indigo-700">
+              <i class="fa fa-map-marker"></i>
+              barneuar str 4, 95643 Tirschenreuth, Germany
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-7 ">
+        <div class="contact-form ">
+
+          <form method="post" action="{% url 'contact' %}" id="contact-form">
+            {% csrf_token %}
+            <div class="form-group text-indigo-700 ">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="form-group text-indigo-700 ">
+              <label for="email">Email</label>
+              <input type="email" class="form-control text-indigo-700 " id="email" name="email" required>
+            </div>
+            <div class="form-group text-indigo-700 ">
+              <label for="message">Message</label>
+              <textarea class="form-control text-indigo-700 " id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div class="form-group text-indigo-700 ">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" class="form-control text-indigo-700 " id="phone" name="phone">
+            </div>
+            <button type="submit" class="btn btn-primar">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}

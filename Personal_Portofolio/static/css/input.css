@@ -1,0 +1,574 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+
+:root {
+  --nav-height: 70px;
+  --paragrph_font: 'Poppins', sans-serif;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #fff;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #771D1D;
+  border-top-color: #dcf5f2;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: border-box;
+
+}
+
+
+#header #navbar ul {
+  display: flex;
+}
+
+#header #navbar li {
+  padding: 10px 20px;
+}
+
+#header .logo {
+  color: #5145CD !important;
+  font-family: 'Lobster', cursive !important;
+}
+
+#header #navbar a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#header #navbar a:hover,
+#header #navbar a.active {
+  color: #5145CD;
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  #header #navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 48px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+
+  #header #navbar ul.show {
+    display: flex;
+  }
+
+  #header #navbar li {
+    padding: 10px 0;
+  }
+
+  #header.header-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+/* hero */
+.hero {
+  position: relative;
+  background-color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  color: #333;
+  height: 100vh;
+  /* Adjust the text color to improve readability */
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: slideIn 1s ease-in-out;
+  /* Decrease animation duration for a smoother effect */
+}
+
+.hero-content h1 {
+  font-size: 36px;
+  /* Increase font size for a more prominent header */
+  margin-bottom: 1rem;
+  /* Slightly reduce margin to improve spacing */
+  color: #2E3A4D;
+  /* Use a darker color for better contrast */
+  font-weight: bold;
+  /* Add bold font weight for emphasis */
+}
+
+.hero-content p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  color: #2E3A4D;
+}
+
+.hero-content .hero-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  /* Increase padding for better button size */
+  background-color: #5145CD;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 5px;
+  /* Use border-radius for rounded buttons */
+  transition: background-color 0.3s;
+  /* Add smooth transition on hover */
+}
+
+.hero-content .hero-btn:hover {
+  background-color: #2E3A4D;
+  /* Adjust hover color to improve visibility */
+}
+
+/* Remove unnecessary keyframes */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    /* Use translateY instead of translateX to slide from top */
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* About Me Section */
+.about-me {
+  background: linear-gradient(to bottom, white, lightgray);
+}
+
+.about-me .aboutHeading {
+  color: #5145CD;
+}
+
+.about-me .row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.about-me .col-md-5 {
+  display: flex;
+  align-items: center;
+}
+
+.about-me .image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-me .image-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0px 0px 10px rgba(78, 143, 241, 0.5);
+}
+
+.about-me .col-md-7 {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skills Section */
+.skills {
+  background-color: transparent;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-item i {
+  font-size: 30px;
+  transition: transform 0.3s ease;
+}
+
+/* CSS Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animate-fade-in class */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+/* Delay-200 class */
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+/* Set original colors for each icon */
+.skill-item i.fab.fa-html5 {
+  color: #e34c26;
+}
+
+.skill-item i.fab.fa-css3-alt {
+  color: #2965f1;
+}
+
+.skill-item i.fab.fa-js {
+  color: #f0db4f;
+}
+
+.skill-item i.fab.fa-jquery {
+  /* Add the corresponding class to the jQuery icon */
+  color: #0769ad;
+}
+
+.skill-item i.fab.fa-tailwind {
+  /* Add the corresponding class to the Tailwind CSS icon */
+  color: #38b2ac;
+}
+
+.skill-item i.fab.fa-bootstrap {
+  color: #563d7c;
+}
+
+.skill-item i.fab.fa-react {
+  color: #61dbfb;
+}
+
+.skill-item i.fab.fa-python {
+  color: #3776ab;
+}
+
+.skill-item i.fab.fa-django {
+  color: #092e20;
+}
+
+.skill-item i.fas.fa-database {
+  color: #00758f;
+}
+
+.skill-item i.fas.fa-code {
+  color: #2b7489;
+}
+
+.skill-item i.fab.fa-git {
+  color: #f05032;
+}
+
+.skill-item i.fas.fa-project-diagram {
+  color: #6cc644;
+}
+
+/* Hover effect to scale icons by 15% */
+.skill-item:hover i {
+  transform: scale(1.15);
+}
+
+.download:hover {
+  background-color: #2E3A4D;
+}
+
+/* projects section */
+
+/* Experience */
+.circle {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #5145CD;
+}
+
+
+/* contact us styling */
+.contact {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contact-me h1 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #5145CD;
+  text-align: center;
+}
+
+
+
+#contact-me .row {
+  margin-top: 20px;
+}
+
+#contact-me .contact-form {
+  background: white;
+  padding: 20px;
+}
+
+.contact button {
+  margin: 5px;
+  background: #5145CD;
+  color: white;
+}
+
+.contact button:hover {
+  margin: 5px;
+  background: #1e0ce2;
+  color: white;
+}
+
+.footer {
+  background-color: #5145CD;
+}
+
+/* Mobile responsiveness */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--third-color);
+    padding: 20px;
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+
+  .navbar-toggler-icon {
+    background-color: var(--secondary-color);
+  }
+
+  .hero {
+    height: 75%;
+  }
+
+  .hero-content h1 {
+    font-size: 1rem !important;
+    margin-top: 100px;
+  }
+
+
+
+  .about-me .row {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .intro {
+    padding: 20px;
+  }
+
+  .about-me .skills {
+    padding: 20px;
+  }
+
+  .about-me .row .skills .skill-item {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
+  .projects {
+    margin: 20px;
+  }
+
+  .projects h1 {
+    font-size: 1.5rem !important;
+    margin: 10px;
+  }
+
+  .experience-section h1 {
+    font-size: 2rem !important;
+    margin: 10px;
+  }
+
+  .timeline-year {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-content {
+    margin-right: 0;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .timeline-content button {
+    font-size: 0.8rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons-footer {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+
+  margin: 0;
+}
+
+.social-icons-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+
+}
+
+
+.social-icons-footer.github:hover {
+  color: rgb(122, 120, 120);
+}
+
+.social-icons-footer.linkedin:hover {
+  color: #0e76a8;
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-icons-footer.instagram:hover {
+  color: #c32aa3;
+}
+
+.social-icons-footer.facebook:hover {
+  color: #3b5998;
+}
+
+
+.social-icons-footer i {
+  font-size: inherit;
+}
+
+.social-icons-footer a.social-icon {
+  font-size: 16px;
+  margin: 0px;
+}
