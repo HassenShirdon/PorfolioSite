@@ -14,6 +14,7 @@ import os
 from pathlib import Path
 import django_heroku
 import dj_database_url
+from whitenoise.middleware import WhiteNoiseMiddleware
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddle',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 
@@ -142,6 +143,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default=EMAIL_HOST_USER)
 
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles") 
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 STATICFILES_STORAGES = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())

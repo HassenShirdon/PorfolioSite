@@ -23,7 +23,7 @@
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #771D1D;
+  border: 6px solid #5145CD;
   border-top-color: #dcf5f2;
   border-radius: 50%;
   width: 60px;
@@ -77,7 +77,6 @@ body {
   color: #5145CD;
 }
 
-/* Mobile Navigation */
 .mobile-nav-toggle {
   display: none;
 }
@@ -85,7 +84,7 @@ body {
 @media (max-width: 991px) {
   .mobile-nav-toggle {
     display: block;
-    font-size: 24px;
+    font-size: 16px;
     cursor: pointer;
     margin-right: 15px;
   }
@@ -113,7 +112,7 @@ body {
   }
 
   #header.header-shadow {
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
   }
 }
 
@@ -127,59 +126,62 @@ body {
   align-items: center;
   justify-content: center;
   padding: 100px 0;
-  color: #333;
+  color: #000;
   height: 100vh;
-  /* Adjust the text color to improve readability */
+
 }
 
 .hero-content {
   max-width: 600px;
   margin: 0 auto;
   animation: slideIn 1s ease-in-out;
-  /* Decrease animation duration for a smoother effect */
 }
 
 .hero-content h1 {
-  font-size: 36px;
-  /* Increase font size for a more prominent header */
+  font-size: 40px;
   margin-bottom: 1rem;
-  /* Slightly reduce margin to improve spacing */
-  color: #2E3A4D;
-  /* Use a darker color for better contrast */
-  font-weight: bold;
-  /* Add bold font weight for emphasis */
+  color: #000;
+  font-weight: 800;
+
 }
 
+.hero-content h1 span {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  color: #5145CD;
+  font-weight: 800;
+  line-height: 40px;
+
+}
+
+
 .hero-content p {
-  font-size: 20px;
+  font-size: 24px;
   margin-bottom: 30px;
-  color: #2E3A4D;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
 }
 
 .hero-content .hero-btn {
   display: inline-block;
   padding: 1rem 2rem;
-  /* Increase padding for better button size */
   background-color: #5145CD;
-  color: #ffffff;
+  color: #FFF;
   text-transform: capitalize;
   text-decoration: none;
   margin: 5px;
-  /* Use border-radius for rounded buttons */
-  transition: background-color 0.3s;
-  /* Add smooth transition on hover */
+  transition: background-color 0.5s;
 }
 
 .hero-content .hero-btn:hover {
   background-color: #2E3A4D;
-  /* Adjust hover color to improve visibility */
+  color: #FFF;
 }
 
-/* Remove unnecessary keyframes */
 @keyframes slideIn {
   from {
     transform: translateY(-50px);
-    /* Use translateY instead of translateX to slide from top */
     opacity: 0;
   }
 
@@ -189,14 +191,20 @@ body {
   }
 }
 
-
 /* About Me Section */
+
 .about-me {
-  background: linear-gradient(to bottom, white, lightgray);
+  background: linear-gradient(to right, white, rgb(241, 240, 240));
 }
 
 .about-me .aboutHeading {
   color: #5145CD;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
 }
 
 .about-me .row {
@@ -210,41 +218,33 @@ body {
   align-items: center;
 }
 
-.about-me .image-container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.about-me .image-container img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  box-shadow: 0px 0px 10px rgba(78, 143, 241, 0.5);
-}
-
-.about-me .col-md-7 {
+.skill-item {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+
+}
+
+
 
 /* Skills Section */
-.skills {
-  background-color: transparent;
-}
 
 .skill-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .skill-item i {
-  font-size: 30px;
+  font-size: 20px;
   transition: transform 0.3s ease;
 }
 
-/* CSS Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -257,18 +257,15 @@ body {
   }
 }
 
-/* Animate-fade-in class */
 .animate-fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in-out forwards;
 }
 
-/* Delay-200 class */
 .delay-200 {
   animation-delay: 200ms;
 }
 
-/* Set original colors for each icon */
 .skill-item i.fab.fa-html5 {
   color: #e34c26;
 }
@@ -282,12 +279,10 @@ body {
 }
 
 .skill-item i.fab.fa-jquery {
-  /* Add the corresponding class to the jQuery icon */
   color: #0769ad;
 }
 
 .skill-item i.fab.fa-tailwind {
-  /* Add the corresponding class to the Tailwind CSS icon */
   color: #38b2ac;
 }
 
@@ -323,9 +318,13 @@ body {
   color: #6cc644;
 }
 
-/* Hover effect to scale icons by 15% */
+
 .skill-item:hover i {
-  transform: scale(1.15);
+  transform: scale(1.5);
+}
+
+.skill-item img:hover {
+  transform: scale(1.5);
 }
 
 .download:hover {
