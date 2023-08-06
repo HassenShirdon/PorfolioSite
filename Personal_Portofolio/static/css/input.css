@@ -1,44 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 
 :root {
   --nav-height: 70px;
   --paragrph_font: 'Poppins', sans-serif;
-}
-
-#preloader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: hidden;
-  background: #fff;
-}
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #5145CD;
-  border-top-color: #dcf5f2;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 body {
@@ -47,9 +12,7 @@ body {
   scroll-behavior: smooth;
   overflow-x: hidden;
   box-sizing: border-box;
-
 }
-
 
 #header #navbar ul {
   display: flex;
@@ -61,7 +24,7 @@ body {
 
 #header .logo {
   color: #5145CD !important;
-  font-family: 'Lobster', cursive !important;
+  font-family: 'Great Vibes', cursive;
 }
 
 #header #navbar a {
@@ -116,6 +79,9 @@ body {
   }
 }
 
+.active {
+  color: #5145CD;
+}
 
 /* hero */
 .hero {
@@ -141,7 +107,8 @@ body {
   font-size: 40px;
   margin-bottom: 1rem;
   color: #000;
-  font-weight: 800;
+  font-weight: 600;
+  padding-bottom: 20px;
 
 }
 
@@ -149,8 +116,9 @@ body {
   font-size: 40px;
   margin-bottom: 1rem;
   color: #5145CD;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 40px;
+
 
 }
 

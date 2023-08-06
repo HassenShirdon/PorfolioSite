@@ -44,3 +44,38 @@ document
   });
 
 AOS.init();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navLinks = document.querySelectorAll("header nav ul li a");
+
+  function handleNavLinkClick(event) {
+    navLinks.forEach((navLink) => navLink.classList.remove("active"));
+    event.target.classList.add("active");
+  }
+
+  function handleScroll() {
+    const fromTop = window.scrollY;
+
+    navLinks.forEach((link) => {
+      const section = document.querySelector(link.hash);
+      if (
+        section.offsetTop <= fromTop + 200 &&
+        section.offsetTop + section.offsetHeight > fromTop + 200
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    });
+  }
+
+  navLinks.forEach((navLink) =>
+    navLink.addEventListener("click", handleNavLinkClick)
+  );
+  window.addEventListener("scroll", handleScroll);
+});
+
+window.addEventListener("load", () => {
+  const preloadLogo = document.getElementById("preload-logo");
+  preloadLogo.style.display = "none";
+});
