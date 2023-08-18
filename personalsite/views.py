@@ -3,9 +3,6 @@ from .forms import ContactForm  # Import your custom form
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.core.mail import send_mail
-from django.shortcuts import render
-from django.shortcuts import render
-from django.core.mail import send_mail
 from .forms import ContactForm
 from .models import Project
 
@@ -31,7 +28,7 @@ def contact(request):
 
             subject = 'Contact Form Submission'
             message = f'Name: {name}\nEmail: {email}\n\nMessage:\n{message}'
-            from_email = settings.DEFAULT_FROM_EMAIL
+            from_email = [settings.DEFAULT_FROM_EMAIL]
             # Set this to the desired recipient email
             recipient_list = [settings.CONTACT_EMAIL]
 
