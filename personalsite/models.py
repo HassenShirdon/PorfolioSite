@@ -6,11 +6,11 @@ import os
 class Project(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
-    picture = models.ImageField(upload_to='personalsite/static/images',
+    picture = models.ImageField(upload_to='media/',
                                 height_field=None, width_field=None, max_length=100, default=0)
     created_at = models.DateTimeField(auto_now_add=True)
-    githublink = models.URLField(default=0)
-    livelink = models.URLField(default=0)
+    githublink = models.URLField(default='')
+    livelink = models.URLField(default='')
     technologies_used = models.CharField(max_length=100, default='')
 
     def __str__(self):

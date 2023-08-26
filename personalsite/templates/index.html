@@ -105,47 +105,58 @@
   </div>
 </section>
 
+<section id="portfolio" class="portfolio py-5 bg-light">
+  <div class="container">
+    <div class="section-title text-center">
+      <h2 class="text-indigo-700">Portfolio</h2>
+      <p class="text-indigo-700">Showcasing my projects</p>
+    </div>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="portfolio-item">
+          <img src="{% static 'images/jeeh.png'%}" class="img-fluid" alt="Project 1" style="height: 220px;">
+          <div class="portfolio-info">
+            <h4 class="p-2 text-indigo-700 text-center">Introducing E-Style, a dynamic full-stack project that
+              brings the world of men's fashion to your fingertips. From meticulously designed shirts to sophisticated
+              accessories like watches and more, E-Style merges HTML, CSS, Bootstrap, and jQuery to curate a seamless
+              shopping experience for the modern gentleman </h4>
 
-<section class="py-10 projects bg-indigo-700" data-aos="fade-right" data-aos-duration="2000" id="projects">
-  <div class="container mx-auto">
-    <h1 class="text-white w-max border-b-2 border-white pb-2 mx-auto text-2xl uppercase">My Portfolio</h1>
-    <div class="flex flex-wrap items-center -mx-4">
-      {% for project in projects %}
-      <div class="w-full md:w-1/2 lg:w-1/2 xl:w-1/2 px-4 pt-4">
-        <div
-          class="project-card rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
-          <img class="w-full rounded-4 img-fluid" src="{{ project.picture.url }}" alt="Project Image">
-          <div class="p-4">
-            <h2 class="text-2xl mb-2 text-center text-white font-bold">{{ project.title }}</h2>
-            <p class="text-white mb-4">{{ project.description }}</p>
-
-            <div class="mt-4">
-              <h4 class="font-bold mb-2 text-white">Technologies Used:</h4>
-              <ul class="list-disc list-inside text-gray-700 d-grid text-center" style="list-style: none;">
-                <li class="text-white rounded-md mb-4 list-disc text-center" style="list-style: none;">
-                  {{ project.technologies_used }}
-                </li>
-              </ul>
-            </div>
-            <div class="flex justify-center space-x-2">
-              <div class="w-full md:w-1/2 px-5 mb-2">
-                <a href="{{ project.githublink }}"
-                  class="inline-block bg-gray-400 hover:bg-red-900 text-white px-4 py-2 rounded-md"><i
-                    class="bi bi-github"></i></a>
-              </div>
-              <div class="w-full md:w-1/2 px-3 mb-2">
-                <a href="{{ project.livelink }}"
-                  class="inline-block bg-gray-400 hover:bg-red-900 text-white px-4 py-2 rounded-md"><i
-                    class="bi bi-browser-chrome"></i></a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-      {% endfor %}
+
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="portfolio-item">
+          <img src="{% static 'images/eccomerce.png'%}" class="img-fluid" alt="Project 2" style="height: 220px;">
+          <div class="portfolio-info">
+            <h4 class="py-2 text-indigo-700 text-center">Embark on a digital journey with Jeeh General Trading,
+              a cutting-edge full-stack project powered by HTML, CSS, Bootstrap, and jQuery. Seamlessly navigate through
+              a realm of imported automobiles and an array of services, including streamlined clearances and precision
+              accounting, as we redefine the essence of automotive trading</h4>
+            <p>Card</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="portfolio-item">
+          <img src="{% static 'images/logo3.png'%}" class="img-fluid" alt="Project 3">
+          <div class="portfolio-info">
+            <h4 class="py-2 text-indigo-700 text-center">Introducing E-Style, a dynamic full-stack project that
+              brings the world of men's fashion to your fingertips. From meticulously designed shirts to sophisticated
+              accessories like watches and more, E-Style merges HTML, CSS, Bootstrap, and jQuery to curate a seamless
+              shopping experience for the modern gentleman </h4>
+            <p>Web</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="experience" data-aos="fade-down" data-aos-duration="5000" class="resume bg-light ">
   <div class="container mx-auto py-16">
@@ -172,7 +183,7 @@
               welcome opportunities to contribute my skills and experience to further elevate digital experiences and
               achieve impactful outcomes.</p>
             <ul class="mt-4">
-              <li class="text-gray-700">Munchen, Germany</li>
+              <li class="text-gray-700">Bavaria, Germany</li>
               <li class="text-gray-700">hassen.hared@gmail.com</li>
             </ul>
           </div>
