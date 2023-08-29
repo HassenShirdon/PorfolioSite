@@ -1,0 +1,771 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+:root {
+  --nav-height: 70px;
+  --paragrph_font: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+
+#header #navbar ul {
+  display: flex;
+}
+
+#header #navbar li {
+  padding: 10px 20px;
+}
+
+#header .logo {
+  color: #5145CD !important;
+  font-family: 'Great Vibes', cursive;
+
+}
+
+#header #navbar a {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#header #navbar a:hover,
+#header #navbar a.active {
+  color: #5145CD;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 15px;
+  }
+
+  #header #navbar ul {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 48px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 999;
+  }
+
+  #header #navbar ul.show {
+    display: flex;
+  }
+
+  #header #navbar li {
+    padding: 10px 0;
+  }
+
+  #header.header-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.active {
+  color: #5145CD;
+}
+
+/* hero */
+.hero {
+  position: relative;
+  background-color: #FFFFFF;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  color: #000;
+  height: 100vh;
+
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+  animation: slideIn 1s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  color: #000;
+  font-weight: 600;
+  padding-bottom: 20px;
+
+}
+
+.hero-content h1 span {
+  font-size: 40px;
+  margin-bottom: 1rem;
+  color: #5145CD;
+  font-weight: 600;
+  line-height: 40px;
+
+
+}
+
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+  font-weight: 400;
+}
+
+.hero-content .hero-btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: #5145CD;
+  color: #FFF;
+  text-transform: capitalize;
+  text-decoration: none;
+  margin: 5px;
+  transition: background-color 0.5s;
+}
+
+.hero-content .hero-btn:hover {
+  background-color: #2E3A4D;
+  color: #FFF;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* About Me Section */
+
+.about-me {
+  background: linear-gradient(to right, white, rgb(241, 240, 240));
+}
+
+.about-me .aboutHeading {
+  color: #5145CD;
+}
+
+.intro {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: justify;
+}
+
+.about-me .row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.about-me .col-md-5 {
+  display: flex;
+  align-items: center;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+
+}
+
+
+
+/* Skills Section */
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.skill-item i {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.delay-200 {
+  animation-delay: 200ms;
+}
+
+.skill-item i.fab.fa-html5 {
+  color: #e34c26;
+}
+
+.skill-item i.fab.fa-css3-alt {
+  color: #2965f1;
+}
+
+.skill-item i.fab.fa-js {
+  color: #f0db4f;
+}
+
+.skill-item i.fab.fa-jquery {
+  color: #0769ad;
+}
+
+.skill-item i.fab.fa-tailwind {
+  color: #38b2ac;
+}
+
+.skill-item i.fab.fa-bootstrap {
+  color: #563d7c;
+}
+
+.skill-item i.fab.fa-react {
+  color: #61dbfb;
+}
+
+.skill-item i.fab.fa-python {
+  color: #3776ab;
+}
+
+.skill-item i.fab.fa-django {
+  color: #092e20;
+}
+
+.skill-item i.fas.fa-database {
+  color: #00758f;
+}
+
+.skill-item i.fas.fa-code {
+  color: #2b7489;
+}
+
+.skill-item i.fab.fa-git {
+  color: #f05032;
+}
+
+.skill-item i.fas.fa-project-diagram {
+  color: #6cc644;
+}
+
+
+.skill-item:hover i {
+  transform: scale(1.5);
+}
+
+.skill-item img:hover {
+  transform: scale(1.5);
+}
+
+.download:hover {
+  background-color: #2E3A4D;
+}
+
+/* projects section */
+
+/* Experience */
+.circle {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #5145CD;
+}
+
+/* projects */
+/* Portfolio section */
+.portfolio {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 28px;
+}
+
+.project-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.project-card h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.project-card .btn {
+  border-radius: 30px;
+  font-size: 14px;
+}
+
+/* portfolio section */
+.portfolio .portfolio-item {
+  margin-bottom: 30px;
+}
+
+.portfolio #portfolio-flters {
+  padding: 0;
+  margin: 0 auto 20px auto;
+  list-style: none;
+  text-align: center;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 16px 10px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #444444;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+  border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #fff;
+  background: #34b7a7;
+}
+
+.portfolio #portfolio-flters li:last-child {
+  margin-right: 0;
+}
+
+.portfolio .portfolio-wrap {
+  transition: 0.3s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background: rgba(34, 34, 34, 0.6);
+}
+
+.portfolio .portfolio-wrap::before {
+  content: "";
+  background: rgba(34, 34, 34, 0.6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: all ease-in-out 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.portfolio .portfolio-wrap img {
+  transition: all ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-info {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+  transition: all ease-in-out 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.portfolio .portfolio-wrap .portfolio-info h4 {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.portfolio .portfolio-wrap .portfolio-info p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+
+.portfolio .portfolio-wrap .portfolio-links {
+  text-align: center;
+  z-index: 4;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a {
+  color: #fff;
+  margin: 0 5px 0 0;
+  font-size: 28px;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-wrap .portfolio-links a:hover {
+  color: #78d9cd;
+}
+
+.portfolio .portfolio-wrap:hover::before {
+  opacity: 1;
+}
+
+.portfolio .portfolio-wrap:hover img {
+  transform: scale(1.2);
+}
+
+.portfolio .portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 0;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #34b7a7;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #34b7a7;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  box-shadow: 0px 0 30px rgba(34, 34, 34, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+/* contact us styling */
+.contact {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#contact-me h1 {
+  font-size: 1.5rem;
+  margin: 10px;
+  color: #5145CD;
+  text-align: center;
+}
+
+
+
+#contact-me .row {
+  margin-top: 20px;
+}
+
+#contact-me .contact-form {
+  background: white;
+  padding: 20px;
+}
+
+.contact button {
+  margin: 5px;
+  background: #5145CD;
+  color: white;
+}
+
+.contact button:hover {
+  margin: 5px;
+  background: #1e0ce2;
+  color: white;
+}
+
+.footer {
+  background-color: #5145CD;
+}
+
+/* Mobile responsiveness */
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+
+  .navbar-collapse {
+    display: none;
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background: var(--third-color);
+    padding: 20px;
+    z-index: 9999;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+
+  .navbar-nav .nav-item {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1rem !important;
+    text-align: center;
+  }
+
+  .navbar-toggler-icon {
+    background-color: var(--secondary-color);
+  }
+
+  .hero {
+    height: 75%;
+  }
+
+  .hero-content h1 {
+    font-size: 1rem !important;
+    margin-top: 100px;
+  }
+
+
+
+  .about-me .row {
+    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .about-me .intro {
+    padding: 20px;
+  }
+
+  .about-me .skills {
+    padding: 20px;
+  }
+
+  .about-me .row .skills .skill-item {
+    font-size: 0.8rem;
+    margin: 0.5rem;
+  }
+
+  .projects {
+    margin: 20px;
+  }
+
+  .projects h1 {
+    font-size: 1.5rem !important;
+    margin: 10px;
+  }
+
+  .experience-section h1 {
+    font-size: 2rem !important;
+    margin: 10px;
+  }
+
+  .timeline-year {
+    position: absolute;
+    top: 25%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 80px;
+    font-size: 0.8rem;
+  }
+
+  .timeline-content {
+    margin-right: 0;
+  }
+
+  .timeline-content h3 {
+    font-size: 1rem;
+    margin: 10px;
+  }
+
+  .timeline-content button {
+    font-size: 0.8rem;
+  }
+
+  .contact button {
+    font-size: 1rem;
+  }
+}
+
+.footer {
+  margin: 0;
+  padding: 0;
+}
+
+.col-md-4 {
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.links a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons-footer {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+
+  margin: 0;
+}
+
+.social-icons-footer a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+
+}
+
+
+.social-icons-footer.github:hover {
+  color: rgb(122, 120, 120);
+}
+
+.social-icons-footer.linkedin:hover {
+  color: #0e76a8;
+}
+
+.social-icon.twitter:hover {
+  color: #1da1f2;
+}
+
+.social-icons-footer.instagram:hover {
+  color: #c32aa3;
+}
+
+.social-icons-footer.facebook:hover {
+  color: #3b5998;
+}
+
+
+.social-icons-footer i {
+  font-size: inherit;
+}
+
+.social-icons-footer a.social-icon {
+  font-size: 16px;
+  margin: 0px;
+}
