@@ -1,13 +1,10 @@
 {
-  "builds": [{
-      "src": "Personal_Portofolio/wsgi.py",
-      "use": "@ardnt/vercel-python-wsgi",
-      "config": { "maxLambdaSize": "15mb" }
-  }],
-  "routes": [
-      {
-          "src": "/(.*)",
-          "dest": "Personal_Portofolio/wsgi.py"
-      }
-  ]
+  "version": 2,
+  "builds": [
+    { "src": "Personal_Portofolio/wsgi.py", "use": "@ardnt/vercel-python-wsgi" }
+  ],
+  "routes": [],
+  "env": {
+    "PYTHON_RUNTIME_VERSION": "python3.9"
+  }
 }
